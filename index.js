@@ -17,14 +17,12 @@ for(const file of commandFiles){
 // when the client is ready, run this code
 // this event will only trigger one time after logging in
 client.once('ready', () => {
-
-    var testchannel = client.channels.find(channel => channel.id === '653341083090157570');
-
     console.log('omg chese');
-
+    
     setInterval(() => {
-        testchannel.send("hi <@375595023724707840> ok bye");
-    }, 21600000);
+        var TestChannel = client.channels.cache.get('653341083090157570');
+        TestChannel.send('hi <@375595023724707840> ok bye');
+      }, 21600000);
 
     client.user.setPresence({ activity: { name: '_help' }, status: 'idle' }).catch(console.error);
 });
