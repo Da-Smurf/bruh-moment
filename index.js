@@ -21,7 +21,7 @@ client.once('ready', () => {
     
     setInterval(() => {
         var TestChannel = client.channels.cache.get('653341083090157570');
-        TestChannel.send('hi <@375595023724707840> ok bye');
+        TestChannel.send('hi');
       }, 21600000);
 
     client.user.setPresence({ activity: { name: '_help' }, status: 'idle' }).catch(console.error);
