@@ -19,10 +19,10 @@ for(const file of commandFiles){
 client.once('ready', () => {
     console.log('omg chese');
     
-    //setInterval(() => {
-        //ar TestChannel = client.channels.cache.get('653341083090157570');
-        //TestChannel.send('hi');
-      //}, 21600000);
+    setInterval(() => {
+        ar TestChannel = client.channels.cache.get('529250901232451584');
+        TestChannel.send('hi noob');
+      }, 604800000);
 
     client.user.setPresence({ activity: { name: '_help' }, status: 'idle' }).catch(console.error);
 });
