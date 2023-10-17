@@ -18,11 +18,11 @@ for(const file of commandFiles){
 // this event will only trigger one time after logging in
 client.once('ready', () => {
     console.log('omg chese');
-    
+
     setInterval(() => {
-        ar TestChannel = client.channels.cache.get('529250901232451584');
-        TestChannel.send('hi noob');
-      }, 604800000);
+        var TestChannel = client.channels.cache.get('653341083090157570');
+        TestChannel.send('timed message for 10 seconds');
+      }, 1800000);
 
     client.user.setPresence({ activity: { name: '_help' }, status: 'idle' }).catch(console.error);
 });
@@ -46,7 +46,7 @@ client.on('message', message =>{
     .addFields(
 		{ name: 'Respond commands', value: '\n Help, This embed \n Ping, just respond with "pong" \n Noob, :sob: you bully :sob: \n Hi, Woah we meet \n invite, do you want me in your server??? \n Prefix, wow u forgot smh \n avatar, wow ur pfp is good ngl' },
 		{ name: '\u200B', value: '\u200B' },
-		{ name: '\u200B', value: '\u200B>', inline: true },
+		{ name: 'Emojis Commands ', value: 'face, <:face:773415576504762398> \n Emotes doesnt work for now.', inline: true },
 	)
     .setTimestamp()
     .setFooter('- Cheese Bot', 'https://i.imgur.com/H2ZRuBP.pngS');
@@ -66,7 +66,7 @@ client.on('message', message =>{
     } else if (command == 'avatar'){
         message.reply(message.author.displayAvatarURL());
     } //else if (command == 'kimi'){
-        //const channel = client.channels.cache.get('653341083090157570');
+        //const channel = client.channels.cache.get('653341083090157570'); //disabled for now
         //channel.send('hi <@375595023724707840> ok bye');
     //}
 });
